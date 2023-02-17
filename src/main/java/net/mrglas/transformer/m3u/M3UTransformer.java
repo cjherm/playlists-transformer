@@ -1,6 +1,6 @@
-package m3u;
+package net.mrglas.transformer.m3u;
 
-import m3u.exceptions.InvalidFilePathException;
+import net.mrglas.transformer.m3u.exceptions.InvalidFilePathException;
 
 import java.io.File;
 
@@ -10,7 +10,7 @@ import java.io.File;
 public class M3UTransformer {
 
     /**
-     * @param extractedPlaylist          the extracted but not yet transformed .m3u playlist
+     * @param extractedPlaylist          the extracted but not yet transformed .net.mrglas.m3u.m3u playlist
      * @param outputFolder               the folder to be hosting all track files
      * @param outputFolderPathInPlaylist the folder path represented in the playlist
      * @return extractedPlaylist the transformed playlist

@@ -1,8 +1,8 @@
-package m3u;
+package net.mrglas.transformer.m3u;
 
-import app.M3UPlaylistTransformer;
+import net.mrglas.transformer.app.M3UPlaylistTransformer;
 import com.google.common.io.Files;
-import m3u.exceptions.PlaylistAlreadyExistsException;
+import net.mrglas.transformer.m3u.exceptions.PlaylistAlreadyExistsException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -15,10 +15,12 @@ public class M3UFilesManager {
 
     public static final String M3U_FILE_ENDING = ".m3u";
     public static final String MP3_FILE_ENDING = ".mp3";
+    public static final String M4A_FILE_ENDING = ".m4a";
+    public static final String WMA_FILE_ENDING = ".wma";
     public static final String PLAYLISTS_FOLDER = "transformed_playlists";
     public static final String SEP_WINDOWS = "\\";
     public static final String SEP_LINUX = "/";
-    private static final String[] validTrackFileTypesList = {MP3_FILE_ENDING};
+    private static final String[] validTrackFileTypesList = {MP3_FILE_ENDING, M4A_FILE_ENDING, WMA_FILE_ENDING};
 
     public static boolean isDirectoryValid(File directoryToCheck) {
         if (!directoryToCheck.exists()) {

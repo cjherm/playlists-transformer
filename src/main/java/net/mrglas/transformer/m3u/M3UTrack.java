@@ -1,7 +1,7 @@
-package m3u;
+package net.mrglas.transformer.m3u;
 
 /**
- * Data structure for a track in a .m3u playlist
+ * Data structure for a track in a .net.mrglas.m3u.m3u playlist
  */
 public class M3UTrack {
 

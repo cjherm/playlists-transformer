@@ -1,4 +1,4 @@
-package m3u;
+package net.mrglas.transformer.m3u;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Creates internal data structure for a given .m3u-playlist
+ * Creates internal data structure for a given .net.mrglas.m3u.m3u-playlist
  */
 public class M3UPlaylistReader {
 

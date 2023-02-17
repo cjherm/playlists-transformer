@@ -1,11 +1,11 @@
-package m3u;
+package net.mrglas.transformer.m3u;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Data structure for a .m3u playlist
+ * Data structure for a .net.mrglas.m3u.m3u playlist
  */
 public class M3UList {
 

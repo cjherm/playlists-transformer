@@ -1,14 +1,14 @@
-package app;
+package net.mrglas.transformer.app;
 
 
-import m3u.M3UFilesManager;
-import m3u.M3UList;
-import m3u.M3UPlaylistReader;
-import m3u.M3UTransformer;
-import m3u.exceptions.InvalidFilePathException;
-import m3u.exceptions.PlaylistExtractionException;
-import m3u.exceptions.PlaylistAlreadyExistsException;
-import m3u.exceptions.PlaylistTransformationException;
+import net.mrglas.transformer.m3u.M3UFilesManager;
+import net.mrglas.transformer.m3u.M3UList;
+import net.mrglas.transformer.m3u.M3UPlaylistReader;
+import net.mrglas.transformer.m3u.M3UTransformer;
+import net.mrglas.transformer.m3u.exceptions.InvalidFilePathException;
+import net.mrglas.transformer.m3u.exceptions.PlaylistExtractionException;
+import net.mrglas.transformer.m3u.exceptions.PlaylistAlreadyExistsException;
+import net.mrglas.transformer.m3u.exceptions.PlaylistTransformationException;
 
 import java.io.File;
 import java.io.IOException;
