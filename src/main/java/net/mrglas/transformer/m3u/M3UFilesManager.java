@@ -50,7 +50,7 @@ public class M3UFilesManager {
 
     public static boolean isValidTrackFile(File fileToCheck) {
         for (String validTrackFileType : validTrackFileTypesList) {
-            if (fileToCheck.getAbsolutePath().endsWith(validTrackFileType)) {
+            if (fileToCheck.getAbsolutePath().toLowerCase().endsWith(validTrackFileType)) {
                 return isFileTypeValid(fileToCheck);
             }
         }
