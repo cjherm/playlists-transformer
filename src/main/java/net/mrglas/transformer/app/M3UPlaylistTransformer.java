@@ -25,7 +25,7 @@ public class M3UPlaylistTransformer {
     public static void main(String[] args) {
 
         if (args == null || args.length != 3) {
-            logError("I need exactly THREE arguments: <PLAYLIST_FILE_PATH> <OUTPUT_FOLDER_PATH> <ANDROID_PATH>");
+            logError("I need exactly THREE arguments: <PLAYLIST_FILE_PATH> <OUTPUT_FOLDER_PATH> <RELATIVE_PATH>");
             return;
         }
 
