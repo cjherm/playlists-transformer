@@ -25,9 +25,3 @@ java -jar M3U-Playlist-Transformer-1.0-jar-with-dependencies.jar <PLAYLIST_PATH>
 - `PLAYLIST_PATH` — path to a single `.m3u` file, or a folder containing multiple playlists
 - `OUTPUT_FOLDER` — folder that the referenced music files and the new playlist will be copied into
 - `RELATIVE_PATH` — the path written into the new playlist for each track (e.g. the folder path on the target device)
-
-Example:
-
-```
-java -jar M3U-Playlist-Transformer-1.0-jar-with-dependencies.jar "C:\Users\<USER>\Music\Playlists" "C:\Users\<USER>\Music\Private" "../Music/Private/"
-```
