@@ -71,18 +71,17 @@ public class M3UFilesManager {
     }
 
     public static void createNewPlaylistFile(M3UList resultList, File outputFolder) throws IOException, PlaylistAlreadyExistsException {
-        String playlistsFolderPath = outputFolder.getAbsolutePath() + SEP_WINDOWS + PLAYLISTS_FOLDER;
-
-        File playlistsFolder = new File(playlistsFolderPath);
+        File playlistsFolder = new File(outputFolder, PLAYLISTS_FOLDER);
         boolean mkdirs = playlistsFolder.mkdirs();
         if (!mkdirs && !playlistsFolder.exists()) {
-            throw new IOException("Error creating necessary directory: \"" + playlistsFolderPath + "\"");
+            throw new IOException("Error creating necessary directory: \"" + playlistsFolder.getAbsolutePath() + "\"");
         }
 
-        String newPlaylistFilePath = playlistsFolderPath + SEP_WINDOWS + resultList.getPlaylistFile().getName();
-        newPlaylistFilePath = newPlaylistFilePath.replace(M3U_FILE_ENDING, " (transformed)" + M3U_FILE_ENDING);
+        String originalPlaylistFileName = resultList.getPlaylistFile().getName();
+        String newPlaylistFileName = originalPlaylistFileName.substring(0, originalPlaylistFileName.length() - M3U_FILE_ENDING.length())
+                + " (transformed)" + M3U_FILE_ENDING;
 
-        File newPlaylistFile = new File(newPlaylistFilePath);
+        File newPlaylistFile = new File(playlistsFolder, newPlaylistFileName);
 
         // do we already have one?
         if (newPlaylistFile.exists()) {
@@ -117,7 +116,7 @@ public class M3UFilesManager {
         if (!isFileTypeValid(playlistFile)) {
             return false;
         }
-        if (!playlistFile.getAbsolutePath().endsWith(M3U_FILE_ENDING)) {
+        if (!playlistFile.getAbsolutePath().toLowerCase().endsWith(M3U_FILE_ENDING)) {
             return false;
         }
         if (!M3UPlaylistReader.isListAValidM3uList(playlistFile)) {
