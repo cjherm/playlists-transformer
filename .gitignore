@@ -12,6 +12,5 @@ target/
 Thumbs.db
 
 # IDE
-.idea/*
-!.idea/.gitignore
+.idea/
 *.iml
