@@ -1,7 +1,0 @@
-#EXTM3U
-#EXTINF:239,SOS - Rihanna
-src\test\resources\source_folder\Rihanna - SOS (Rescue Me).mp3
-#EXTINF:230,Seven Nation Army - The White Stripes
-src\test\resources\source_folder\White Stripes - Seven Nation Army.mp3
-#EXTINF:666,Not copy me
-doNotCopyThisFile.mp3
